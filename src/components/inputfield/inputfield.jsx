@@ -170,12 +170,15 @@ export default function NumberInputs() {
   };
 
   return (
-    <div className="space-y-6">
-      <p className="text-sm opacity-70">
+    <div className="space-y-6 ">
+      <p className="text-sm   opacity-70">
         Kalite Puanının Hesaplanabilmesi İçin Aşağıdaki Verileri Girin.
       </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<p className="text-sm text-purple-400   ">
+       
+        Ondalık ayraç olarak nokta kullanınız !
+      </p>
+      <div className="  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {FIELDS.map((label, i) => {
   const isDisabled = DISABLED_LABELS.has(label);
   const defaultVal = isDisabled ? defaultFor(label) : "";

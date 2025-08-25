@@ -127,8 +127,8 @@ const ode_2020=values[FIELDS.indexOf("ODE 2020")] ; */
   const columns = useMemo(
     () => [
       { key: "metric", header: "Yıl", align: "left" },
-      { key: "saidi", header: "SAİDİ PUANI", align: "right" ,colorize: true },
-      { key: "saifi", header: "SAİFİ PUANI", align: "right" ,colorize: true },
+      { key: "saidi", header: "SAİDİ PUANI", align: "center" ,colorize: true },
+      { key: "saifi", header: "SAİFİ PUANI", align: "center" ,colorize: true },
      // { key: "y2022", header: "ODE PUANI", align: "right" ,colorize: true },
     /*  { key: "trend", header: "ÖNCEKİ SENE PUANI", align: "center",
         
