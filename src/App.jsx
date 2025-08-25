@@ -188,10 +188,10 @@ return (
       {/* Sol: Veri Girişi (toggle'lı) */}
       <div className="lg:col-span-7">
         {visible ? (
-          <div className="card bg-info-content text-primary-content shadow-md ">
+          <div className="card bg-info-content text-white shadow-md ">
             <div className="card-body ">
-              <div className="flex items-center justify-between">
-                <h1 className="card-title ">Veri Girişi</h1>
+              <div className="flex  items-center justify-between">
+                <p className="card-title text-2xl text-center  ">Veri Girişi</p>
                 <button
                   onClick={() => setVisible(false)}
                   className="btn btn-secondary btn-outline"
