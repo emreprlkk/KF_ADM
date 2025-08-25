@@ -194,7 +194,7 @@ return (
                 <h1 className="card-title ">Veri Girişi</h1>
                 <button
                   onClick={() => setVisible(false)}
-                  className="btn btn-neutral btn-outline"
+                  className="btn btn-secondary btn-outline"
                 >
                   Gizle
                 </button>
