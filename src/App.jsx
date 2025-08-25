@@ -142,7 +142,7 @@ const ode_2020=values[FIELDS.indexOf("ODE 2020")] ; */
           </span>
         )
       }*/
-      { key: "ode", header: "ODE (KWh)", align: "center"},
+      { key: "ode", header: "ODE PUANI", align: "center"},
            { key: "toplam", header: "TOPLAM KALİTE PUANI", align: "center"},
     ],
     []
