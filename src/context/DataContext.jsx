@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useMemo, useState } from "react";
 
 // 👇 Tek yerde şema (basit): Yıllar ve metrik sayısı
-export const YEARS = [  2024, 2023, 2022, 2021,2020,2019,2018];
+export const YEARS = [  2025, 2024, 2023, 2022, 2021,2020,2019,2018];
 export const METRICS = ["SAIDI", "SAIFI","ODE","KKO" ]; // 3 alan / yıl
 
 // Form label'ları otomatik üretelim (ör: "SAİDİ 2025", "SAİFİ 2025", "ODE 2025", ...)

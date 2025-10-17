@@ -41,6 +41,22 @@ const ode_2020=values[FIELDS.indexOf("ODE 2020")] ; */
 // 1) Tüm KF sonuçlarını values'a bağlı tek bir useMemo'da hesapla
   const kf = useMemo(() => {
     // ÖRNEK: 2025 için SAİDİ / SAİFİ puanları
+
+      const saidi2026 = KFPUAN_SAİDİ(
+      get(values, "SAIDI 2025"),
+      get(values, "SAIDI 2024"),
+      get(values, "SAIDI 2023"),
+      get(values, "SAIDI 2022"),
+     get(values, "SAIDI 2021")
+    );
+
+    const saifi2026 = KFPUAN_SAİFİ(
+     get(values, "SAIFI 2025"),
+      get(values, "SAIFI 2024"),
+      get(values, "SAIFI 2023"),
+      get(values, "SAIFI 2022"),
+     get(values, "SAIFI 2021")
+    );
     const saidi2025 = KFPUAN_SAİDİ(
       get(values, "SAIDI 2024"),
       get(values, "SAIDI 2023"),
@@ -107,9 +123,16 @@ const ode_2020=values[FIELDS.indexOf("ODE 2020")] ; */
       get(values, "KKO 2023"),
 
     );
+        const ode_2026 = KFODE(
+      get(values, "ODE 2025"),
+      get(values, "ODE 2024"),
+      get(values, "KKO 2023"),
+      get(values, "KKO 2022"),
 
+    );
     // İleride 2025/2024 hesaplarını da aynı şekilde ekle
     return {
+       "2026": { saidi: saidi2026, saifi: saifi2026 ,ode :ode_2026 },
       "2025": { saidi: saidi2025, saifi: saifi2025 ,ode :ode_2025 },
       "2024": { saidi: saidi2024, saifi: saifi2024 , ode :0 },
       "2023": { saidi: saidi2023, saifi: saifi2023 , ode :0 },
@@ -150,6 +173,13 @@ const ode_2020=values[FIELDS.indexOf("ODE 2020")] ; */
   // 3) Satırlar — sadece kf'ye bağlı (values değil!)
   const rows = useMemo(
     () => [
+        { metric: "2026", saidi: f(kf["2026"].saidi), saifi: f(kf["2026"].saifi), ode: f(kf["2026"].ode), 
+        toplam: f(
+        safeNum(kf["2026"].saidi) +
+        safeNum(kf["2026"].saifi) +
+        safeNum(kf["2026"].ode)
+      ), },
+     
       { metric: "2025", saidi: f(kf["2025"].saidi), saifi: f(kf["2025"].saifi), ode: f(kf["2025"].ode), 
         toplam: f(
         safeNum(kf["2025"].saidi) +
